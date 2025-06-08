@@ -233,9 +233,9 @@ The final model architecture is a lightweight 1D CNN designed for time-series cl
   ```
 4. Train the model and export formats
    
-   ```bash
-   jupyter notebook TinyML_for_Gait_Event_Detection_in_Parkinson's_main.ipynb
-   ```
+```bash
+jupyter notebook TinyML_for_Gait_Event_Detection_in_Parkinson's_main.ipynb
+```
 
 
 
