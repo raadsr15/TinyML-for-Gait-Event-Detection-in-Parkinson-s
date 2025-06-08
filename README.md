@@ -163,6 +163,53 @@ Two subject recordings (`S09`, `S10`) were held out during training and used as 
 
 This setup simulates deployment on **unseen patients** in real-world use cases.
 
+##  Results
+
+The CNN-based model was trained on 8 subjects using a stratified 85–15% train-validation split. Hyperparameter tuning was performed over a grid of filter sizes, kernel sizes, dropout rates, and learning rates.
+
+###  Best Validation Performance
+
+- **F1 Score:** 0.9029
+- **Accuracy:** 90.31%
+- **Precision:** 89.44%
+- **Recall:** 91.12%
+- **AUC:** 0.9614
+
+###  Generalization Evaluation
+
+To assess cross-subject generalization, the final model was tested on subject `S10` (completely unseen during training). The results were as follows:
+
+- **Generalization Accuracy:** 77.61%
+- **Generalization F1 Score:** 0.764
+- **Confusion Matrix** and **ROC/PR Curves** included in the notebook.
+
+This validates the model’s robustness for real-world applications where data from new patients is encountered.
+
+---
+
+##  Model Variants & Exported Formats
+
+The final model architecture is a lightweight 1D CNN designed for time-series classification with TinyML deployment in mind.
+
+###  Model Architecture
+
+- 2 × Conv1D + BatchNorm + MaxPooling
+- Global Average Pooling
+- Dropout (0.3)
+- Dense(64) + Output sigmoid layer
+
+###  Exported Model Formats
+
+| Format                   | File                                             | Purpose                                 |
+|--------------------------|--------------------------------------------------|------------------------------------------|
+| **PyTorch**              | `gait_fog_model_traced.pt`                       | TorchScript for PyTorch inference        |
+| **ONNX**                 | `gait_model.onnx`                                | Interoperability across platforms        |
+| **TensorFlow (.h5)**     | `gait_cnn_model.h5`                              | Keras model checkpoint                   |
+| **TensorFlow Lite**      | `gait_cnn_model.tflite`                          | Lightweight mobile deployment            |
+| **TFLite (Optimized)**   | `gait_cnn_model_optimized.tflite`               | TinyML edge deployment                   |
+
+>  All models are located in the `Models/` directory of this repository.
+
 
 
 
