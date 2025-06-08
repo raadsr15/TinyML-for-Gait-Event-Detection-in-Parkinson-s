@@ -94,7 +94,7 @@ Each IMU sensor provides tri-axial acceleration, resulting in a total of **9 fea
 | 5–7   | `thigh_x/y/z`    | 3-axis thigh acceleration                   |
 | 8–10  | `trunk_x/y/z`    | 3-axis trunk acceleration                   |
 | 11    | `label`          | 1 = Freezing, 0 = No Freezing               |
-| 12    | `task`           | Type of activity (e.g., Walk, Turn, Stand)  |
+
 
 FoG annotations were manually labeled by clinical experts based on synchronized video recordings.
 
