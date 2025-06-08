@@ -220,17 +220,17 @@ The final model architecture is a lightweight 1D CNN designed for time-series cl
   ```bash
   git clone https://github.com/raadsr15/TinyML-for-Gait-Event-Detection-in-Parkinson's.git
   cd TinyML-for-Gait-Event-Detection-in-Parkinson's
-
+  ```
 2. Install dependencies:
 
   ```bash
   pip install -r requirements.txt
-
+  ```
 3. Convert raw .txt data to .csv:
 
   ```bash
   jupyter notebook text_to_csv_conversion.ipynb
-
+  ```
 
 
 
