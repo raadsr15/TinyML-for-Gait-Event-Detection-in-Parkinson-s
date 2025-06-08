@@ -5,8 +5,6 @@ Traditional clinical assessments or patient self-reports are limited in their ab
 
 This project leverages such IMU data and proposes a lightweight 1D Convolutional Neural Network (CNN) model to detect FoG events. The model is trained on a publicly available dataset released by Baechlin et al. (2010), which includes labeled recordings from 10 Parkinson’s patients performing gait-related tasks. A sliding window approach is used to segment the time-series data into model-friendly samples.
 
-The final model achieved an F1-score of 0.9029 on the validation set and 77.61% accuracy on an unseen generalization subject—demonstrating its robustness across subjects. To support deployment in real-world wearable devices, the model was exported in multiple formats including PyTorch, ONNX, TensorFlow, and TensorFlow Lite (TFLite and optimized TFLite) for TinyML compatibility.
-
 This work contributes to the development of efficient, on-device FoG detection systems that can function in real-time and outside clinical settings.
 
 # Project Structure
@@ -193,7 +191,7 @@ This validates the model’s robustness for real-world applications where data f
 
 ##  Model Variants & Exported Formats
 
-The final model architecture is a lightweight 1D CNN designed for time-series classification with TinyML deployment in mind.
+The final model architecture is a lightweight 1D CNN designed for time-series classification with TinyML deployment in mind. To support deployment in real-world wearable devices, the model was exported in multiple formats including PyTorch, ONNX, TensorFlow, and TensorFlow Lite (TFLite and optimized TFLite) for TinyML compatibility.
 
 ###  Model Architecture
 
