@@ -1,5 +1,13 @@
 # TinyML for Gait Event Detection in Parkinson's
-TinyFog-CNN is a lightweight 1D Convolutional Neural Network (CNN) model designed for real-time detection of Freezing of Gait (FoG) in Parkinson’s Disease patients using ankle and hip worn IMU sensors. Built for TinyML deployment with TensorFlow Lite.
+Freezing of Gait (FoG) is a common and disruptive motor symptom in patients with Parkinson’s disease (PD), often described as a temporary inability to move the feet forward despite the intention to walk. These episodes significantly impair mobility and increase the risk of falls. Accurate, real-time detection of FoG is essential for providing timely interventions and improving patient safety and independence.
+
+Traditional clinical assessments or patient self-reports are limited in their ability to capture FoG episodes that occur unpredictably in daily life. To address this, Inertial Measurement Units (IMUs)—wearable sensors capable of capturing multi-axis acceleration—have gained popularity as a non-invasive and practical solution for continuous gait monitoring. Data collected from IMUs worn on the ankle, thigh, and trunk provides detailed insights into a patient's movement patterns.
+
+This project leverages such IMU data and proposes a lightweight 1D Convolutional Neural Network (CNN) model to detect FoG events. The model is trained on a publicly available dataset released by Baechlin et al. (2010), which includes labeled recordings from 10 Parkinson’s patients performing gait-related tasks. A sliding window approach is used to segment the time-series data into model-friendly samples.
+
+The final model achieved an F1-score of 0.9029 on the validation set and 77.61% accuracy on an unseen generalization subject—demonstrating its robustness across subjects. To support deployment in real-world wearable devices, the model was exported in multiple formats including PyTorch, ONNX, TensorFlow, and TensorFlow Lite (TFLite and optimized TFLite) for TinyML compatibility.
+
+This work contributes to the development of efficient, on-device FoG detection systems that can function in real-time and outside clinical settings.
 
 `````
 ## Project Structure
