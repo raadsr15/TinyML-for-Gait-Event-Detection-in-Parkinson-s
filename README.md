@@ -61,12 +61,14 @@ TinyFog-CNN/
 # Dataset Description
 This project uses the publicly available Freezing of Gait (FoG) dataset, originally developed to support research on wearable assistance for Parkinson’s disease patients experiencing gait disturbances.
 
-## Source
-The dataset was introduced in the study:
+## Dataset Access
+The Freezing of Gait (FoG) dataset used in this project is publicly available via the UCI Machine Learning Repository:
 
-Baechlin et al., "Wearable Assistant for Parkinson’s Disease Patients With the Freezing of Gait Symptom," IEEE TITB, 2010.
-Link to paper (preprint included in repo)
+📎 Daphnet Freezing of Gait Dataset – UCI ML Repository
+Published by the Daphnet Project, this dataset contains time-series IMU recordings from Parkinson’s disease patients experiencing gait episodes, including annotated FoG events.
 
-The dataset is included in the dataset_fog_release/ directory of this repository.
+It is originally described in:
+
+Baechlin, D. et al., "Wearable Assistant for Parkinson’s Disease Patients With the Freezing of Gait Symptom," IEEE Transactions on Information Technology in Biomedicine, 2010.
 
 
