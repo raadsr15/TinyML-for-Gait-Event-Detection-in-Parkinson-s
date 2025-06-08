@@ -61,6 +61,56 @@ TinyFog-CNN/
 # Dataset Description
 This project uses the publicly available Freezing of Gait (FoG) dataset, originally developed to support research on wearable assistance for Parkinson’s disease patients experiencing gait disturbances.
 
+###  Source
+
+The dataset was introduced in the study:
+
+> **Baechlin et al.**, _"Wearable Assistant for Parkinson’s Disease Patients With the Freezing of Gait Symptom,"_ IEEE Transactions on Information Technology in Biomedicine, 2010.  
+> 📄 [Link to dataset (UCI ML Repository)](https://archive.ics.uci.edu/dataset/245/daphnet+freezing+of+gait)  
+> 🗂️ A preprint of this paper is also included in the `dataset_fog_release/doc/` directory of this repository.
+
+---
+
+###  Data Characteristics
+
+Each file (e.g., `S01R01.txt`) contains time-series IMU signals recorded at **64 Hz**, gathered from three body locations:
+
+- **Ankle**  
+- **Thigh**  
+- **Trunk**  
+
+Each IMU sensor provides tri-axial acceleration, resulting in a total of **9 features** per time step.
+
+---
+
+###  File Format Overview
+
+| Index | Feature Name     | Description                                 |
+|-------|------------------|---------------------------------------------|
+| 1     | `Time`           | Timestamp in seconds                        |
+| 2–4   | `ankle_x/y/z`    | 3-axis ankle acceleration                   |
+| 5–7   | `thigh_x/y/z`    | 3-axis thigh acceleration                   |
+| 8–10  | `trunk_x/y/z`    | 3-axis trunk acceleration                   |
+| 11    | `label`          | 1 = Freezing, 0 = No Freezing               |
+| 12    | `task`           | Type of activity (e.g., Walk, Turn, Stand)  |
+
+FoG annotations were manually labeled by clinical experts based on synchronized video recordings.
+
+---
+
+###  Data Split Strategy
+
+To ensure model robustness and assess cross-subject generalization:
+
+- **Training & Validation Subjects:**  
+  `S01` through `S08`
+
+- **Generalization Subjects (held out):**  
+  `S09`, `S10`
+
+These generalization subjects are used to simulate real-world deployment on unseen patients.
+
+
 ## Dataset Access
 The Freezing of Gait (FoG) dataset used in this project is publicly available via the UCI Machine Learning Repository:
 
