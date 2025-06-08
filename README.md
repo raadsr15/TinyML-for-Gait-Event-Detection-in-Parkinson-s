@@ -9,8 +9,9 @@ The final model achieved an F1-score of 0.9029 on the validation set and 77.61% 
 
 This work contributes to the development of efficient, on-device FoG detection systems that can function in real-time and outside clinical settings.
 
-`````
 ## Project Structure
+`````
+
 TinyFog-CNN/
 ├── Models/
 │   ├── ONNX Model/
