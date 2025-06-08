@@ -61,13 +61,17 @@ TinyFog-CNN/
 # Dataset Description
 This project uses the publicly available Freezing of Gait (FoG) dataset, originally developed to support research on wearable assistance for Parkinson’s disease patients experiencing gait disturbances.
 
-###  Source
+###  Dataset Access
+
+This project uses the publicly available **Daphnet Freezing of Gait Dataset**, accessible through the UCI Machine Learning Repository:
+
+> 🔗 [Daphnet Freezing of Gait Dataset – UCI ML Repository](https://archive.ics.uci.edu/dataset/245/daphnet+freezing+of+gait)
 
 The dataset was introduced in the study:
 
-> **Baechlin et al.**, _"Wearable Assistant for Parkinson’s Disease Patients With the Freezing of Gait Symptom,"_ IEEE Transactions on Information Technology in Biomedicine, 2010.  
-> 📄 [Link to dataset (UCI ML Repository)](https://archive.ics.uci.edu/dataset/245/daphnet+freezing+of+gait)  
-> 🗂️ A preprint of this paper is also included in the `dataset_fog_release/doc/` directory of this repository.
+> **Baechlin et al.**, _"Wearable Assistant for Parkinson’s Disease Patients With the Freezing of Gait Symptom,"_ IEEE Transactions on Information Technology in Biomedicine, 2010.
+
+📎 A preprint of this publication is included in the repository under `dataset_fog_release/doc/`.
 
 ---
 
@@ -111,14 +115,6 @@ To ensure model robustness and assess cross-subject generalization:
 These generalization subjects are used to simulate real-world deployment on unseen patients.
 
 
-## Dataset Access
-The Freezing of Gait (FoG) dataset used in this project is publicly available via the UCI Machine Learning Repository:
 
-📎 Daphnet Freezing of Gait Dataset – UCI ML Repository
-Published by the Daphnet Project, this dataset contains time-series IMU recordings from Parkinson’s disease patients experiencing gait episodes, including annotated FoG events.
-
-It is originally described in:
-
-Baechlin, D. et al., "Wearable Assistant for Parkinson’s Disease Patients With the Freezing of Gait Symptom," IEEE Transactions on Information Technology in Biomedicine, 2010.
 
 
