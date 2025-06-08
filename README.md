@@ -114,6 +114,10 @@ To ensure model robustness and assess cross-subject generalization:
 
 These generalization subjects are used to simulate real-world deployment on unseen patients.
 
+##  text_to_csv_conversion.ipynb
+
+This notebook converts the raw `.txt` files from the Daphnet FoG dataset into structured `.csv` files. It assigns meaningful column names, organizes the data by subject, and saves cleaned outputs for training and evaluation. This step enables consistent preprocessing and segmentation across all models.
+
 ##  Data Preprocessing & Pipeline
 
 To prepare the raw IMU sensor data for training, the following preprocessing steps were applied:
