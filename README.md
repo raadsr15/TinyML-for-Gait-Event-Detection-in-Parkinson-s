@@ -48,3 +48,16 @@ TinyFog-CNN/
 └── .gitignore              # Ignore models, cache, etc.
 
 `````
+
+## Dataset Description
+This project uses the publicly available Freezing of Gait (FoG) dataset, originally developed to support research on wearable assistance for Parkinson’s disease patients experiencing gait disturbances.
+
+# Source
+The dataset was introduced in the study:
+
+Baechlin et al., "Wearable Assistant for Parkinson’s Disease Patients With the Freezing of Gait Symptom," IEEE TITB, 2010.
+Link to paper (preprint included in repo)
+
+The dataset is included in the dataset_fog_release/ directory of this repository.
+
+
