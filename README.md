@@ -114,6 +114,55 @@ To ensure model robustness and assess cross-subject generalization:
 
 These generalization subjects are used to simulate real-world deployment on unseen patients.
 
+##  Data Preprocessing & Pipeline
+
+To prepare the raw IMU sensor data for training, the following preprocessing steps were applied:
+
+---
+
+###  1. Sliding Window Segmentation
+
+The time-series data from each subject file (`.csv` format) was segmented using a **sliding window** approach:
+
+- **Window Size:** 128 time steps (2 seconds of data at 64Hz)
+- **Stride:** 64 time steps (50% overlap)
+
+Each window was treated as one training sample. The **label** for each window was assigned as:
+
+- `1` if **any** time step in the window had FoG (`label=1`)
+- `0` if **all** time steps in the window had `label=0`
+
+---
+
+###  2. Normalization
+
+All IMU features were **z-score normalized**:
+
+- Mean and standard deviation were computed **across all training samples**
+- The same values were used to normalize both training and generalization subjects
+
+This ensures consistent feature scaling across subjects and time periods.
+
+---
+
+###  3. Dataset Preparation
+
+- The segmented and normalized data was reshaped to **(samples, 128, 9)** to fit the expected CNN input format
+- Corresponding binary labels (`y`) were stored for classification
+
+>  The final training dataset is saved as `Xy_train_combined_1-8.csv` for reuse and reproducibility.
+
+---
+
+###  Generalization Subject Evaluation
+
+Two subject recordings (`S09`, `S10`) were held out during training and used as **generalization subjects**. Their data was:
+
+- Preprocessed using the **same pipeline**
+- Evaluated post-training to test model **generalization** capability
+
+This setup simulates deployment on **unseen patients** in real-world use cases.
+
 
 
 
