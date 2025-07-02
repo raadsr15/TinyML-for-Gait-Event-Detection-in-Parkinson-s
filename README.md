@@ -1,3 +1,6 @@
+
+![Flux_Dev_A_wearable_healthtech_concept_showing_a_Parkinsons_pa_3](https://github.com/user-attachments/assets/fe7a52c6-8ee4-4f50-a146-d5765429ef5d)
+
 # TinyML for Gait Event Detection in Parkinson's
 Freezing of Gait (FoG) is a common and disruptive motor symptom in patients with Parkinson’s disease (PD), often described as a temporary inability to move the feet forward despite the intention to walk. These episodes significantly impair mobility and increase the risk of falls. Accurate, real-time detection of FoG is essential for providing timely interventions and improving patient safety and independence.
 
