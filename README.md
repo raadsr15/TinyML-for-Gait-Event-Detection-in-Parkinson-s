@@ -180,6 +180,13 @@ The CNN-based model was trained on 8 subjects using a stratified 85–15% train-
 - **Recall:** 91.12%
 - **AUC:** 0.9614
 
+![image](https://github.com/user-attachments/assets/d8c91fef-2231-401c-9b85-f2712fa76b8d)
+
+
+![image](https://github.com/user-attachments/assets/a03f2974-d5c3-4943-9708-0d0bf7782c72)
+
+
+
 ###  Generalization Evaluation
 
 To assess cross-subject generalization, the final model was tested on subject `S10` (completely unseen during training). The results were as follows:
